@@ -8,8 +8,10 @@
 
     <h3>Intelimen TT</h3>
 
-    <select data-bind="options: $root.users, value: 'id', optionsText: 'name'"></select>
- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
+    <select data-bind="options: $root.users, value: selectedUser, optionsText: 'name'"></select>
+    <h1 data-bind="text: selectedUser() ? selectedUser().name : '-'"></h1>
+
+    <!-- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre> -->
     <!--
     <ul data-bind="foreach: tasks, visible: tasks().length > 0">
         <li>
