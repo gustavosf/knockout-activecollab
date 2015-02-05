@@ -9,7 +9,10 @@
     <h3>Intelimen TT</h3>
 
     <select data-bind="options: $root.users, value: selectedUser, optionsText: 'name'"></select>
-    <h1 data-bind="text: selectedUser() ? selectedUser().name : '-'"></h1>
+    <h1 data-bind="text: selectedUser() ? selectedUser().id : '-'"></h1>
+    <button data-bind="click: showGraph">Buscar</button>
+
+    <div id="container" style="height: 400px"></div>
 
     <!-- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre> -->
     <!--
@@ -26,7 +29,7 @@
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/knockout/dist/knockout.debug.js"></script>
-    <script type="text/javascript" src="bower_components/highcharts-release/highcharts-all.js"></script>
+    <script type="text/javascript" src="bower_components/highcharts-release/highcharts.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
